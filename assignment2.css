@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightpink;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: beige;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    color: black;
+}
+
+nav ul li:hover {
+    background-color: rebeccapurple;
+}
+
+.container {
+    padding: 20px;
+}
+
+.audio-controls {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: aquamarine;
+    border-top: 1px solid black;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-button {
+    background-color: lightcoral;
+    color:lavenderblush;
+    transition: 0.3s;
+}
+
+.custom-button:hover {
+    background-color: lightblue;
+}

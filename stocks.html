@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Stocks</title>
+        <link rel="stylesheet" href="assignment2.css">
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li onclick="location.href='home.html'">Home</li>
+                <li onclick="location.href='stocks.html'">Stocks</li>
+                <li onclick="location.href='dogs.html'">Dogs</li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <h2>Stock Lookup</h2>
+            <input type="text" id="ticker" placeholder="Enter Ticker">
+            <select id="days">
+                <option value="30">30 Days</option>
+                <option value="60">60 Days</option>
+                <option value="90">90 Days</option>
+            </select>
+            <button class="custom-button" onclick="fetchStock()">Show Chart</button>
+
+            <canvas id="stockChart" width="400" height="200"></canvas>
+
+            <h2>Top 5 Reddit Stocks</h2>
+            <table border="1" id="redditTable"></table>
+        </div>
+
+        <div class="audio-controls">
+            <h3>Audio Instructions</h3>
+            <p>Say "lookup TSLA", "navigate to home"</p>
+            <button onclick="toggleAudio(true)">Turn On Audio</button>
+            <button onclick="toggleAudio(false)">Turn Off Audio</button>
+        </div>
+
+        <script src="libs/chart.min.js"></script>
+        <script src="libs/annyang.min.js"></script>
+        <script src="main.js"></script>
+        <script src="stocks.js"></script>
+
+    </body>
+</html>

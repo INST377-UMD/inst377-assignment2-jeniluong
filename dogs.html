@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Dogs</title>
+        <link rel="stylesheet" href="assignment2.css">
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li onclick="location.href='home.html'">Home</li>
+                <li onclick="location.href='stocks.html'">Stocks</li>
+                <li onclick="location.href='dogs.html'">Dogs</li>
+            </ul>            
+        </nav>
+
+        <div class="container">
+            <h2>Dog Carousel</h2>
+            <div id="carousel"></div>
+
+            <div id="breedInfo" style="display: none; margin-top: 20px;"></div>
+        </div>
+
+        <div class="audio-controls">
+            <h3>Audio Instructions</h3>
+            <p>Say "load dog breed beagle", "navigate to stocks</p>
+            <button onclick="toggleAudio(true)">Turn On Audio</button>
+            <button onclick="toggleAudio(false)">Turn Off Audio</button>
+        </div>
+
+        <script src="libs/annyang.min.js"></script>
+        <script src="main.js"></script>
+        <script src="dogs.js"></script>
+
+    </body>
+</html>
