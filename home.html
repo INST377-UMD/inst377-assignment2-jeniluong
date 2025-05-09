@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="assignment2.css">
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li onclick="location.href='home.html'">Home</li>
+                <li onclick="location.href='stocks.html'">Stocks</li>
+                <li onclick="location.href='dogs.html'">Dogs</li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <h1>Welcome!</h1>
+            <div id="quote"></div>
+            <button class="custom-button" onclick="location.href='stocks.html'">Stocks</button>
+            <button class="custom-button" onclick="location.href='dogs.html'">Dogs</button>
+        </div>
+
+        <div class="audio-controls">
+            <h3>Audio Instructions</h3>
+            <p>Say "hello", "change the color to blue", "navigate to stocks"</p>
+            <button class="audio-button" onclick="toggleAudio(true)">Turn On Audio</button>
+            <button class="audio-button" onclick="toggleAudio(false)">Turn Off Audio</button>
+        </div>
+
+
+        <script src="libs/annyang.min.js"></script>
+        <script src="main.js"></script>
+        <script>
+            fetch('https://zenquotes.io/api/random')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('quote').innerText = `"${data[0].q}" - ${data[0].a}`;
+            });
+        </script>
+
+    </body>
+</html>
