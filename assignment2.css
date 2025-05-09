@@ -50,3 +50,18 @@ button {
 .custom-button:hover {
     background-color: lightblue;
 }
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+#stockChart {
+    max-width: 700px;
+    width: 90%;3
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+}

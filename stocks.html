@@ -23,7 +23,9 @@
             </select>
             <button class="custom-button" onclick="fetchStock()">Show Chart</button>
 
-            <canvas id="stockChart" width="400" height="200"></canvas>
+            <div class="chart-container">
+                <canvas id="stockChart"></canvas>
+            </div>
 
             <h2>Top 5 Reddit Stocks</h2>
             <table border="1" id="redditTable"></table>
@@ -37,6 +39,7 @@
         </div>
 
         <script src="libs/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
         <script src="libs/annyang.min.js"></script>
         <script src="main.js"></script>
         <script src="stocks.js"></script>
