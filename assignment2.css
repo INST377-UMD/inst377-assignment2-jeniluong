@@ -51,6 +51,16 @@ button {
     background-color: lightblue;
 }
 
+.audio-button {
+    background-color:red;
+    color: black;
+}
+
+.audio-button:hover {
+    background-color: lightgrey;
+    color: white;
+}
+
 .chart-container {
     position: relative;
     height: 400px;
@@ -60,7 +70,7 @@ button {
 
 #stockChart {
     max-width: 700px;
-    width: 90%;3
+    width: 90%;
     height: 400px;
     margin: 0 auto;
     display: block;
