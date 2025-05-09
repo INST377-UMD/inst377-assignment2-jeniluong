@@ -1,48 +1,55 @@
-<html>
-    <head>
-        <title>Stocks</title>
-        <link rel="stylesheet" href="assignment2.css">
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stocks</title>
+  <link rel="stylesheet" href="assignment2.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
 
-    <body>
-        <nav>
-            <ul>
-                <li onclick="location.href='home.html'">Home</li>
-                <li onclick="location.href='stocks.html'">Stocks</li>
-                <li onclick="location.href='dogs.html'">Dogs</li>
-            </ul>
-        </nav>
+  <nav>
+    <ul>
+      <li onclick="location.href='home.html'">Home</li>
+      <li onclick="location.href='stocks.html'">Stocks</li>
+      <li onclick="location.href='dogs.html'">Dogs</li>
+    </ul>
+  </nav>
 
-        <div class="container">
-            <h2>Stock Lookup</h2>
-            <input type="text" id="ticker" placeholder="Enter Ticker">
-            <select id="days">
-                <option value="30">30 Days</option>
-                <option value="60">60 Days</option>
-                <option value="90">90 Days</option>
-            </select>
-            <button class="custom-button" onclick="fetchStock()">Show Chart</button>
+  <div class="container">
+    <h2>Stock Lookup</h2>
 
-            <div class="chart-container">
-                <canvas id="stockChart"></canvas>
-            </div>
+    <label for="ticker">Enter Ticker:</label>
+    <input type="text" id="ticker" placeholder="e.g. AAPL" />
 
-            <h2>Top 5 Reddit Stocks</h2>
-            <table border="1" id="redditTable"></table>
-        </div>
+    <label for="days">Days:</label>
+    <select id="days">
+      <option value="7">7</option>
+      <option value="30" selected>30</option>
+      <option value="60">60</option>
+    </select>
 
-        <div class="audio-controls">
-            <h3>Audio Instructions</h3>
-            <p>Say "lookup TSLA", "navigate to home"</p>
-            <button class="audio-button" onclick="toggleAudio(true)">Turn On Audio</button>
-            <button class="audio-button" onclick="toggleAudio(false)">Turn Off Audio</button>
-        </div>
+    <button onclick="fetchStock()">Fetch Stock</button>
 
-        <script src="libs/chart.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
-        <script src="libs/annyang.min.js"></script>
-        <script src="main.js"></script>
-        <script src="stocks.js"></script>
+    <div style="width: 100%; height: 400px; margin-top: 20px;">
+      <canvas id="stockChart"></canvas>
+    </div>
+  </div>
 
-    </body>
+  <div class="container">
+    <h2>Top Reddit Stocks</h2>
+    <table id="redditTable" border="1" cellpadding="10" style="width: 100%"></table>
+  </div>
+
+  <div class="audio-controls">
+    <h3>Audio Instructions</h3>
+    <p>Say "lookup AAPL", "navigate to home", etc.</p>
+    <button class="audio-button" onclick="toggleAudio(true)">Turn On Audio</button>
+    <button class="audio-button" onclick="toggleAudio(false)">Turn Off Audio</button>
+  </div>
+
+  <script src="libs/annyang.min.js"></script> <!-- Ensure annyang is loaded -->
+  <script src="main.js"></script>
+  <script src="stocks.js"></script>
+
+</body>
 </html>

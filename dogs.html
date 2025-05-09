@@ -1,35 +1,38 @@
 <html>
-    <head>
-        <title>Dogs</title>
-        <link rel="stylesheet" href="assignment2.css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Dogs</title>
+  <link rel="stylesheet" href="assignment2.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li onclick="location.href='home.html'">Home</li>
+      <li onclick="location.href='stocks.html'">Stocks</li>
+      <li onclick="location.href='dogs.html'">Dogs</li>
+    </ul>            
+  </nav>
 
-    <body>
-        <nav>
-            <ul>
-                <li onclick="location.href='home.html'">Home</li>
-                <li onclick="location.href='stocks.html'">Stocks</li>
-                <li onclick="location.href='dogs.html'">Dogs</li>
-            </ul>            
-        </nav>
+  <div class="container">
+    <h2>Dog Carousel</h2>
+    <div id="carousel" style="width: 200px; height: 200px;" data-simple-slider></div>
 
-        <div class="container">
-            <h2>Dog Carousel</h2>
-            <div id="carousel"></div>
+    <h2>Dog Breeds</h2>
+    <div id="breeds" style="margin-top: 20px;"></div>
 
-            <div id="breedInfo" style="display: none; margin-top: 20px;"></div>
-        </div>
+    <div id="breedInfo" style="display: none; margin-top: 20px;"></div>
+  </div>
 
-        <div class="audio-controls">
-            <h3>Audio Instructions</h3>
-            <p>Say "load dog breed beagle", "navigate to stocks</p>
-            <button class="audio-button" onclick="toggleAudio(true)">Turn On Audio</button>
-            <button class="audio-button" onclick="toggleAudio(false)">Turn Off Audio</button>
-        </div>
+  <div class="audio-controls">
+    <h3>Audio Instructions</h3>
+    <p>Say: "load dog breed beagle", "navigate to home"</p>
+    <button class="audio-button" onclick="toggleAudio(true)">Turn On Audio</button>
+    <button class="audio-button" onclick="toggleAudio(false)">Turn Off Audio</button>
+  </div>
 
-        <script src="libs/annyang.min.js"></script>
-        <script src="main.js"></script>
-        <script src="dogs.js"></script>
-
-    </body>
+  <script src="libs/annyang.min.js"></script>
+  <script src="main.js"></script>
+  <script src="dogs.js"></script>
+</body>
 </html>
